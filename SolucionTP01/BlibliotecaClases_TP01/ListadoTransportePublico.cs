@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using b
 namespace TP01
 {
     public class ListadoTransportePublico
@@ -43,8 +44,6 @@ namespace TP01
 
             if(transportes.Count > 0)
             {
-                cadena.AppendLine(" - Listado de Transportes Publicos\n");
-
                 foreach (TransportePublico vehiculo in this.transportes)
                 {
                     cadena.AppendLine(vehiculo.ToString());
@@ -52,7 +51,6 @@ namespace TP01
             }
             else
             {
-
                 cadena.AppendLine(" - No hay transportes publicos en el listado.");
             }
 

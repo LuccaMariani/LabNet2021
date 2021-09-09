@@ -68,7 +68,7 @@ namespace TP01
                         {
                             Console.WriteLine("- No es un codigo numerico valido, reintente\n>");
 
-                            pasajerosTaxi = Console.ReadLine();
+                            pasajerosOmnibus = Console.ReadLine();
                         }
 
                         listado.AgregarTransportePublico(codigoOmnibus, pasajerosOmnibusParseado, 'o', listado);
