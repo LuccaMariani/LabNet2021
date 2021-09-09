@@ -50,10 +50,17 @@ namespace TP01
                             pasajerosTaxi = Console.ReadLine();
                         }
 
-                        listado.AgregarTransportePublico(codigoTaxi, pasajerosTaxiParseado, 't', listado);
+                        if(listado.AgregarTransportePublico(codigoTaxi, pasajerosTaxiParseado, 't', listado))
+                        { 
+                            Console.WriteLine("- Agregado correctamente. ");
+                        }
+                        else
+                        {
+                            Console.WriteLine("- No se agrego el Taxi porque ya hay 5.");
+                        }
 
 
-                        break;
+                break;
                     case 2:
                         Console.WriteLine("=> Agregar OMNIBUS <=\n");
 
@@ -72,7 +79,16 @@ namespace TP01
                             pasajerosOmnibus = Console.ReadLine();
                         }
 
-                        listado.AgregarTransportePublico(codigoOmnibus, pasajerosOmnibusParseado, 'o', listado);
+                        if(listado.AgregarTransportePublico(codigoOmnibus, pasajerosOmnibusParseado, 'o', listado))
+                        {
+                            Console.WriteLine("- Agregado correctamente. ");
+                        }
+                        else
+                        {
+                            Console.WriteLine("- No se agrego el Omnibus porque ya hay 5.");
+                        }
+
+
 
                         break;
                     case 3:
