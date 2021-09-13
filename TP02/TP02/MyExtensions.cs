@@ -10,9 +10,7 @@ namespace TP02
     {
         public static int DividirPor(this int dividendo, int divisor)
         {
-            int cociente = 0; //retorno
-
-            cociente = dividendo / divisor;
+            int cociente = dividendo / divisor;
 
             return cociente;
         }
@@ -21,9 +19,7 @@ namespace TP02
 
         public static int MultiplicarPor(this int multiplicando, int multiplicador)
         {
-            int producto = 0; //retorno
-
-            producto = multiplicando * multiplicador;
+            int producto = multiplicando * multiplicador;
 
             return producto;
         }

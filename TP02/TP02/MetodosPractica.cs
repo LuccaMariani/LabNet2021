@@ -34,7 +34,7 @@ namespace TP02
 
             try
             {
-                dividendo.DividirPor(divisor);
+                retorno = dividendo.DividirPor(divisor);
             }
             catch(DivideByZeroException exc)
             {

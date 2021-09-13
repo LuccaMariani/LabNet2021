@@ -22,7 +22,7 @@ namespace ConsoleAppTP2
 
             while (continuarPrograma)
             {
-                Console.WriteLine(" Opciones : \n\n 1 - Ingrese un numero que va a ser dividido por 0.\n 2 - Ingrese 2 numeros a ser divididos entre si.\n 3 - Disparar excepcion .\n 4 - Mismo ejercMismo ejercicio enterior, pero con excepcion propia.\n 5 - Salir\n");
+                Console.WriteLine(" Opciones : \n\n 1 - Ingrese un numero que va a ser dividido por 0.\n 2 - Ingrese 2 numeros a ser divididos entre si.\n 3 - Disparar excepcion .\n 4 - Mismo ejercicio enterior, pero con excepcion propia.\n 5 - Salir\n");
                 Console.WriteLine("- Ingrese el NUMERO de la opcion a realizar.");
                 Console.Write(">");
                 opcion = Console.ReadLine();
@@ -37,7 +37,7 @@ namespace ConsoleAppTP2
                         int dividendoParseado;
 
                         Console.WriteLine("=> Metodo Uno <=\n");
-                        Console.Write("- Ingrese el dividendo.");
+                        Console.Write("- Ingrese el dividendo, a ser dividido por 0.");
                         string dividendo = Console.ReadLine();
 
                         while (!Int32.TryParse(dividendo, out dividendoParseado))
@@ -109,22 +109,34 @@ namespace ConsoleAppTP2
                         break;
                     case 4:
 
-                        int dividendoParseado3;
+                        int divisorParseado4;
+                        int dividendoParseado4;
 
-                        Console.WriteLine("=> Metodo Uno <=\n");
+                        Console.WriteLine("=> Metodo Dos <=\n");
                         Console.Write("- Ingrese el dividendo.");
-                        string dividendo3 = Console.ReadLine();
+                        string dividendo4 = Console.ReadLine();
 
-                        while (!Int32.TryParse(dividendo3, out dividendoParseado3))
+                        while (!Int32.TryParse(dividendo4, out dividendoParseado4))
                         {
                             Console.WriteLine("- No es un numero valido, reintente\n>");
 
-                            dividendo3 = Console.ReadLine();
+                            dividendo4 = Console.ReadLine();
+                        }
+
+                        Console.Write("- Ingrese el divisor.");
+
+                        string divisor4 = Console.ReadLine();
+
+                        while (!Int32.TryParse(divisor4, out divisorParseado4))
+                        {
+                            Console.WriteLine("- No es un numero valido, reintente\n>");
+
+                            divisor = Console.ReadLine();
                         }
 
                         try
                         {
-                            Console.WriteLine("Resultado: " + operacion.MetodoUno(dividendoParseado3));
+                            Console.WriteLine("Resultado: " + operacion.MetodoCuatro(dividendoParseado4, divisorParseado4));
                         }
                         catch (MyExceptions exc)
                         {
