@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css"/>
+    <script src="../jquery/jquery.js"></script>
+	<script src="../javascript/pepes.js"> </script>
+</head>
+<body>
+
+    <form class="center">
+		<div>
+			<h2>CONTACTO</h2><br>
+		</div>
+		<div>
+			<label>Completa tus datos<label><br><br>
+		</div>
+        <table class="tabla">	
+			<tr>
+				<td><label>Informacion Personal</label></td>
+			</tr>
+			<tr>
+				<td>
+					<hr> 
+				</td>
+			</tr>
+			<tr>
+				<td><label for="txtNombre">Nombre:</label></td>	
+			</tr>
+			<tr>
+				<td><input type="text" name="txtNombre" id="txtNombre" pattern="[a-zA-Z]{2,254}" ></td>
+			</tr>
+			<tr>
+				<td><label for="txtApellido">Apellido:</label></td>     
+			</tr>
+			<tr>
+				<td><input type="text" name="txtApellido" id="txtApellido" pattern="[a-zA-Z]{2,254}" ></td>
+			</tr>
+			<tr>
+				<td><label for="txtEdad">Edad:</label></td>
+			</tr>
+			<tr>
+				<td><input type="number" name="txtEdad" id="txtEdad" min="1" max="130"></td>
+			</tr>
+			<tr>		
+				<td><br></td>
+			</tr>
+			<tr>
+				<td>
+					<input name="rdoSexo" id="rdoSexoMasculino"	type="radio" value="Masculino" checked>
+					<label for="rdoSexoMasculino">Masculino</label>
+					<br>
+					<input name="rdoSexo" id="rdoSexoFemenino" type="radio" value="Femenino">
+					<label for="rdoSexoFemenino">Femenino</label>
+					<br>
+					<input name="rdoSexo" id="rdoSexoOtro" type="radio" value="Otro">
+					<label for="rdoSexoOtro">Otro</label>
+				</td>
+			</tr>
+			<tr>
+				<td><br></td>
+			</tr>
+			<tr>
+				<td>
+					<label>Informacion Adicional</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<hr>    
+				</td>
+			</tr>
+
+			<tr>
+				<td>    
+					<label for="txtEmpresa">Empresa:</label>
+					</td>
+			</tr>
+			<tr>
+				<td><input type="text" name="txtEmpresa" id="txtEmpresa" pattern="[a-zA-Z]{2,254}" ></td>
+			</tr>
+			<tr>
+				<td><br></td>
+			</tr>
+            <tr>
+                <td class="inputbox"><input type="button" onclick="Limpiar();" id="btnLimpiar" value="Limpiar"></td>
+            </tr>
+			
+			<tr>
+				<td class="inputbox"> <input type="button" onclick="Validar();"  id="btnEnviar"  value="Enviar"></td>
+			</tr>
+        </table>
+
+
+    </form>
+
+                      
+</body>
+</html>

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(20deg, rgb(74, 203, 218), rgb(240, 240, 240));
+    font-family: "Roboto", sans-serif;
+}
+
+
+.center {
+    display: inline-block;
+    background: #fff;
+    position: relative;
+    padding: 50px 50px;
+    border-radius: 50px;
+}
+
+.center .tabla label {
+    font-style: italic;
+}
+
+.center input {
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.center .inputbox [type="reset"]  {
+    width: 50%;
+    background: dodgerblue;
+    color: #fff;
+    border: #fff;
+}
+
+.center .inputbox [type="button"]{
+    width: 50%;
+    background: dodgerblue;
+    color: #fff;
+    border: #fff;
+}
+
