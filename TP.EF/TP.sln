@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.EF.UI", "TP04.EF.UI\TP.EF.UI.csproj", "{6FCD2C67-D3E8-4AFC-980F-8D7FF1C2A451}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.EF.UI", "TP.EF.UI\TP.EF.UI.csproj", "{6FCD2C67-D3E8-4AFC-980F-8D7FF1C2A451}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.EF.Logic", "TP04.EF.Logic\TP.EF.Logic.csproj", "{186E10D6-36FC-443F-AE64-AA0F9A16FE4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.EF.Logic", "TP.EF.Logic\TP.EF.Logic.csproj", "{186E10D6-36FC-443F-AE64-AA0F9A16FE4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.EF.Data", "TP04.EF.Data\TP.EF.Data.csproj", "{81D68A6E-06DE-48C5-8172-8442FD41B557}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.EF.Data", "TP.EF.Data\TP.EF.Data.csproj", "{81D68A6E-06DE-48C5-8172-8442FD41B557}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.EF.Entidades", "TP04.EF.Entidades\TP.EF.Entidades.csproj", "{2ECCC3EC-0CEB-4B9D-9489-C5C556DDBA16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.EF.Entidades", "TP.EF.Entidades\TP.EF.Entidades.csproj", "{2ECCC3EC-0CEB-4B9D-9489-C5C556DDBA16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
