@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6FCD2C67-D3E8-4AFC-980F-8D7FF1C2A451}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>TP04.EF.UI</RootNamespace>
-    <AssemblyName>TP04.EF.UI</AssemblyName>
+    <ProjectGuid>{2ECCC3EC-0CEB-4B9D-9489-C5C556DDBA16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TP.EF.Entidades</RootNamespace>
+    <AssemblyName>TP.EF.Entidades</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -50,23 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Employees.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shippers.cs" />
+    <Compile Include="Suppliers.cs" />
+    <Compile Include="Territories.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TP04.EF.Entidades\TP04.EF.Entidades.csproj">
-      <Project>{2eccc3ec-0ceb-4b9d-9489-c5c556ddba16}</Project>
-      <Name>TP04.EF.Entidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TP04.EF.Logic\TP04.EF.Logic.csproj">
-      <Project>{186e10d6-36fc-443f-ae64-aa0f9a16fe4f}</Project>
-      <Name>TP04.EF.Logic</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

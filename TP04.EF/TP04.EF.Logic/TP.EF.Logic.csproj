@@ -7,8 +7,8 @@
     <ProjectGuid>{186E10D6-36FC-443F-AE64-AA0F9A16FE4F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TP04.EF.Logic</RootNamespace>
-    <AssemblyName>TP04.EF.Logic</AssemblyName>
+    <RootNamespace>TP.EF.Logic</RootNamespace>
+    <AssemblyName>TP.EF.Logic</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -59,13 +59,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TP04.EF.Data\TP04.EF.Data.csproj">
+    <ProjectReference Include="..\TP04.EF.Data\TP.EF.Data.csproj">
       <Project>{81D68A6E-06DE-48C5-8172-8442FD41B557}</Project>
-      <Name>TP04.EF.Data</Name>
+      <Name>TP.EF.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TP04.EF.Entidades\TP04.EF.Entidades.csproj">
+    <ProjectReference Include="..\TP04.EF.Entidades\TP.EF.Entidades.csproj">
       <Project>{2ECCC3EC-0CEB-4B9D-9489-C5C556DDBA16}</Project>
-      <Name>TP04.EF.Entidades</Name>
+      <Name>TP.EF.Entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

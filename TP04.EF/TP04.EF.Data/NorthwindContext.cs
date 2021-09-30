@@ -2,9 +2,9 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
-using TP04.EF.Entidades;
+using TP.EF.Entidades;
 
-namespace TP04.EF.Data
+namespace TP.EF.Data
 {
     public partial class NorthwindContext : DbContext
     {

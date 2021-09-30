@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TP04.EF.Data;
-using TP04.EF.Entidades;
+using TP.EF.Data;
+using TP.EF.Entidades;
 
-namespace TP04.EF.Logic
+namespace TP.EF.Logic
 {
     public class SuppliersLogic : BaseLogic, IABMLogic<Suppliers>
     {

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using TP04.EF.Logic;
-using TP04.EF.Entidades;
+using TP.EF.Logic;
+using TP.EF.Entidades;
 
-namespace TP04.EF.UI
+namespace TP.EF.UI
 {
     public class Interface
     {

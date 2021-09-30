@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TP04.EF.Entidades;
+using TP.EF.Entidades;
 
-namespace TP04.EF.Logic
+namespace TP.EF.Logic
 {
     interface IABMLogic<T>
     {

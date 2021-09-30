@@ -1,4 +1,4 @@
-namespace TP04.EF.Entidades
+namespace TP.EF.Entidades
 {
     using System;
     using System.Collections.Generic;
