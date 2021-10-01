@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using TP.EF.Logic;
-using TP.EF.Entidades;
+using TP.EF.Entities;
 
 namespace TP.EF.UI
 {

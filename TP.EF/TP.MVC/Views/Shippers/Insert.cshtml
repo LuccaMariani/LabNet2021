@@ -1,0 +1,13 @@
+﻿@model TP.MVC.Models.ShippersView
+
+@{
+	ViewBag.Title = "Shippers Page";
+}
+
+<h1>Insert de Shippers</h1>
+
+@using (Html.BeginForm("Insert", "Shipper", FormMethod.Post))
+{
+	<label>Descripcion: </label> @Html.TextBoxFor(s => s.Description)
+	<input type="submit" class="btn-primary" value="guardar" />
+}

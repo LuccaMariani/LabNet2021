@@ -59,9 +59,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TP.EF.Entidades\TP.EF.Entidades.csproj">
+    <ProjectReference Include="..\TP.EF.Entidades\TP.EF.Entities.csproj">
       <Project>{2eccc3ec-0ceb-4b9d-9489-c5c556ddba16}</Project>
-      <Name>TP.EF.Entidades</Name>
+      <Name>TP.EF.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\TP.EF.Logic\TP.EF.Logic.csproj">
       <Project>{186e10d6-36fc-443f-ae64-aa0f9a16fe4f}</Project>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TP.EF.Data;
-using TP.EF.Entidades;
+using TP.EF.Entities;
 
 namespace TP.EF.Logic
 {

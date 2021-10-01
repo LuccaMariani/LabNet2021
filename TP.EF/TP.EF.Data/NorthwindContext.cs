@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
-using TP.EF.Entidades;
+using TP.EF.Entities;
 
 namespace TP.EF.Data
 {
