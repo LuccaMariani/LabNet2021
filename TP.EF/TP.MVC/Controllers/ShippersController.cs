@@ -14,7 +14,6 @@ namespace TP.MVC.Controllers
     {
         ShippersLogic logic = new ShippersLogic();
 
-        // GET: Shippers
         public ActionResult Index()
         {
             List<Shippers> shippers = this.logic.GetAll();
@@ -22,12 +21,12 @@ namespace TP.MVC.Controllers
             List<ShippersView> shippersView = shippers.Select(s => new ShippersView
             {
                 Id = s.ShipperID,
-                Description = s.CompanyName,
+                CompanyName = s.CompanyName,
+                Phone = s.Phone,
             }).ToList();
 
             return View(shippersView);
         }
-
 
 
         public ActionResult Insert()
@@ -40,112 +39,72 @@ namespace TP.MVC.Controllers
         {
             try
             {
-
-                Shippers shipperEntity = new Shippers { CompanyName = shipperView.Description };
+                Shippers shipperEntity = new Shippers { CompanyName = shipperView.CompanyName, Phone = shipperView.Phone };
 
                 logic.Add(shipperEntity);
 
                 return RedirectToAction("Index");
             }
-            catch (Exception exc)
+            catch(Exception)
+            {
+                return RedirectToAction("Index", "Error");
+            }
+        }
+
+
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                logic.Delete(id);
+
+                return RedirectToAction("Index");
+            }
+            catch(Exception)
+            {
+                return RedirectToAction("Index", "Error");
+            }
+        }
+
+        public ActionResult Update(int id)
+        {
+            try
+            {
+                List<Shippers> shippers = this.logic.GetAll();
+
+                List<ShippersView> shippersView = shippers.Select(s => new ShippersView
+                {
+                    Id = s.ShipperID,
+                    CompanyName = s.CompanyName,
+                    Phone = s.Phone,
+                }).ToList();
+
+                var model = shippersView.Find(p => p.Id == id);
+
+                return View(model);
+            }
+            catch (Exception)
             {
                 return RedirectToAction("Index", "Error");
             }
 
         }
 
-
-
-
-
-
-
-
-
-
-        // GET: Shippers/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Shippers/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Shippers/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Update(ShippersView shipperView)
         {
             try
             {
-                // TODO: Add insert logic here
+                logic.Update(shipperView.Id, 1, shipperView.CompanyName);
+                logic.Update(shipperView.Id, 2, shipperView.Phone);
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception)
             {
-                return View();
-            }
-        }
-
-
-
-
-        // GET: Shippers/Edit/5
-        public ActionResult Edit(int id)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch(Exception exc)
-            {
-                return View();
+                return RedirectToAction("Index", "Error");
             }
 
-        }
-
-        // POST: Shippers/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Shippers/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Shippers/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }

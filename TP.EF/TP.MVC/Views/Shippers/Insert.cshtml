@@ -1,13 +1,37 @@
 ﻿@model TP.MVC.Models.ShippersView
 
 @{
-	ViewBag.Title = "Shippers Page";
+    ViewBag.Title = "Shippers Insert";
 }
 
 <h1>Insert de Shippers</h1>
-
-@using (Html.BeginForm("Insert", "Shipper", FormMethod.Post))
+<style>
+    th, td {
+        padding: 5px;
+    }
+</style>
+@using (Html.BeginForm("Insert", "Shippers", FormMethod.Post))
 {
-	<label>Descripcion: </label> @Html.TextBoxFor(s => s.Description)
-	<input type="submit" class="btn-primary" value="guardar" />
+<table>
+
+    <tr>
+        <td>Descripcion: </td>
+        <td>@Html.TextBoxFor(s => s.CompanyName, new { @required = "required"})</td>
+        
+    </tr>
+    <tr>
+        <td>Telefono:</td>
+        <td>@Html.TextBoxFor(s => s.Phone, new { @required = "required" })</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" value="Guardar" />
+        </td>
+    </tr>
+
+</table>
 }
+
+
+
+

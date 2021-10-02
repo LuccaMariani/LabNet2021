@@ -3,28 +3,36 @@
 	ViewBag.Title = "Shippers Page";
 }
 
-<h1>Index de Shippers</h1>
+<h1>Listado de Shippers</h1>
 
 <table class="table table-hover">
 	<thead>
-		<tr>
-			<th scope="col">ID</th>
-			<th scope="col">Name</th>
-
-		</tr>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Action</th> 
+        </tr>
 	</thead>
 	<tbody>
 		@foreach (var shipper in Model)
 		{
-			<tr>
-				<th scope="row">@shipper.Id</th>
-				<td>@shipper.Description</td>
-			</tr>
+        <tr>
+            <th scope="row">@shipper.Id</th>
+            <td>@shipper.CompanyName</td>
+            <td>@shipper.Phone</td>
+            <td>
+                @Html.ActionLink("Eliminar", "Delete", new { id = shipper.Id },
+                   new { onclick = "return confirm('Esta seguro que quiere eliminar el Shipper?')" })
+                -
+                @Html.ActionLink("Modificar", "Update", new { id = shipper.Id })
+            </td>
+        </tr>
 		}
 	</tbody>
 
 </table>
 
 <div>
-	@Html.ActionLink("Insertar una nueva Region", "Insert", "Shippers")
+	@Html.ActionLink("Insertar una nuevo Shipper", "Insert", "Shippers")
 </div>

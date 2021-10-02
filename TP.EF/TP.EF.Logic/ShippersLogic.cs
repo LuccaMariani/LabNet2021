@@ -16,24 +16,47 @@ namespace TP.EF.Logic
             return context.Shippers.ToList();
         }
 
+        public Shippers Get(int id)
+        {
+            return context.Shippers.Find(id);
+        }
+
         public void Add(Shippers shipper)
         {
-            context.Shippers.Add(shipper);
+            try
+            {
 
-            context.SaveChanges();
+                context.Shippers.Add(shipper);
+            }
+            catch(Exception exc)
+            {
+                throw exc;
+            }
+            finally
+            {
+                context.SaveChanges();
+            } 
         }
 
         public void Delete(int id)
         {
-            /*
-            var shipperToDelete = context.Shippers.Single(r => r.ShipperID == id);
-            Añadir excepciones para usar este.
-            */
 
-            var shipperToDelete = context.Shippers.Find(id);
+            try
+            {
+                var shipperToDelete = context.Shippers.Find(id);
 
-            context.Shippers.Remove(shipperToDelete);
-            context.SaveChanges();
+                context.Shippers.Remove(shipperToDelete);
+            }
+            catch (Exception exc)
+            {
+                throw exc;
+            }
+            finally
+            {
+                context.SaveChanges();
+            }
+
+            
         }
 
         /// <summary>
@@ -62,8 +85,11 @@ namespace TP.EF.Logic
             {
                 throw exc;
             }
+            finally
+            {
 
-            context.SaveChanges();
+                context.SaveChanges();
+            }
         }
 
         public bool Contains(int id)

@@ -1,0 +1,33 @@
+﻿@model TP.MVC.Models.ShippersView
+
+@{
+    ViewBag.Title = "Shippers Update";
+}
+
+<h1>Update del Shipper</h1>
+<style>
+    th, td {
+        padding: 5px;
+    }
+</style>
+@using (Html.BeginForm("Update", "Shippers", FormMethod.Post))
+{
+    <table>
+
+        <tr>
+            <td>Descripcion: </td>
+            <td>@Html.TextBoxFor(s => s.CompanyName, new { @required = "required" })</td>
+
+        </tr>
+        <tr>
+            <td>Telefono:</td>
+            <td>@Html.TextBoxFor(s => s.Phone, new { @required = "required" })</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Guardar" />
+            </td>
+        </tr>
+
+    </table>
+}
