@@ -12,24 +12,24 @@
 </style>
 @using (Html.BeginForm("Insert", "Shippers", FormMethod.Post))
 {
-<table>
+    <table>
 
-    <tr>
-        <td>Descripcion: </td>
-        <td>@Html.TextBoxFor(s => s.CompanyName, new { @required = "required"})</td>
+        <tr>
+            <td>Descripcion: </td>
+            <td>@Html.TextBoxFor(s => s.CompanyName, new { @required = "required"})</td>
         
-    </tr>
-    <tr>
-        <td>Telefono:</td>
-        <td>@Html.TextBoxFor(s => s.Phone, new { @required = "required" })</td>
-    </tr>
-    <tr>
-        <td>
-            <input type="submit" value="Guardar" />
-        </td>
-    </tr>
+        </tr>
+        <tr>
+            <td>Telefono:</td>
+            <td>@Html.TextBoxFor(s => s.Phone, new { @required = "required" })</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Guardar" />
+            </td>
+        </tr>
 
-</table>
+    </table>
 }
 
 

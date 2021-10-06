@@ -1,0 +1,34 @@
+﻿@model TP.MVC.Models.ApiView
+
+@{
+    ViewBag.Title = "Api's Page";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+
+            <th scope="col">Name</th>
+            <th scope="col">Birth year</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Height</th>
+            <th scope="col">Eye Color</th>
+            <th scope="col">Skin Color</th>
+            <th scope="col">Home World</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">@Model.name</th>
+            <td>@Model.birth_year</td>
+            <td>@Model.gender</td>
+            <td>@Model.height</td>
+            <td>@Model.eye_color</td>
+            <td>@Model.skin_color</td>
+            <td>@Model.homeworld</td>
+        </tr>
+        </tbody>
+
+</table>
+
+
