@@ -1,0 +1,24 @@
+<h2>Formulario de Shippers</h2>
+
+<form [formGroup]="shippersForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="inputID">Shippers ID</label>
+    <input formControlName="id" type="number" class="form-control" id="id" placeholder="Enter Shippers ID" min="0">
+
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="inputCompanyName">Company Name</label>
+    <input formControlName="companyName" type="text" class="form-control" id="companyName" placeholder="Company's Name">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="inputPhone">Phone Number</label>
+    <input formControlName="phone" type="tel" class="form-control" id="phone" placeholder="Phone Number">
+  </div>
+  <br>
+  <div>
+    <button type="submit" class="btn btn-primary" (click)="guardarShipper()">Guardar</button>
+    <button type="reset" class="btn btn-secondary" (click)="cancelarFormulario()">Limpiar</button>
+  </div>
+</form>
